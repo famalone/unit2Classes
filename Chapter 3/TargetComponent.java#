@@ -13,6 +13,12 @@ public class TargetComponent extends JComponent
        
        Target target = new Target(200,200);
        
-       target.draw(g2);
     }
+
+    public int sampleMethod(int y)
+    {
+        // put your code here
+        return x+y;
+    }
+
 }
