@@ -5,23 +5,30 @@ public class Target
 {
     private int xLeft;
     private int yTop;
+    private int diam;
 
     /**
      * Default constructor for objects of class Target
      */
-    public Target(int x,int y)
+    public Target(int x,int y,int diameter)
     {
         this.xLeft = x;
         this.yTop = y;
+        this.diam = diameter;
     }
 
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double redC1 = new Ellipse2D.Double(xLeft - 50,yTop - 50,100,100);
-        Ellipse2D.Double whiteC1 = new Ellipse2D.Double(xLeft - 40,yTop - 40,80,80);
-        Ellipse2D.Double redC2 = new Ellipse2D.Double(xLeft - 30,yTop - 30,60,60);
-        Ellipse2D.Double whiteC2 = new Ellipse2D.Double(xLeft - 20,yTop - 20,40,40);
-        Ellipse2D.Double redC3 = new Ellipse2D.Double(xLeft - 10,yTop - 10,20,20);
+        int hAndW1 = this.diam;
+        Ellipse2D.Double redC1 = new Ellipse2D.Double(xLeft - hAndW1/2,yTop - hAndW1/2,hAndW1,hAndW1);
+        int hAndW2 = this.diam - (this.diam/5);
+        Ellipse2D.Double whiteC1 = new Ellipse2D.Double(xLeft - hAndW2/2,yTop - hAndW2/2,hAndW2,hAndW2);
+        int hAndW3 = this.diam - ((this.diam/5) * 2);
+        Ellipse2D.Double redC2 = new Ellipse2D.Double(xLeft - hAndW3/2,yTop - hAndW3/2,hAndW3,hAndW3);
+        int hAndW4 = this.diam - ((this.diam/5) * 3);
+        Ellipse2D.Double whiteC2 = new Ellipse2D.Double(xLeft - hAndW4/2,yTop - hAndW4/2,hAndW4,hAndW4);
+        int hAndW5 = this.diam - ((this.diam/5) * 4);
+        Ellipse2D.Double redC3 = new Ellipse2D.Double(xLeft - hAndW5/2,yTop - hAndW5/2,hAndW5,hAndW5);
         
         g2.draw(redC1);
         g2.draw(whiteC1);
